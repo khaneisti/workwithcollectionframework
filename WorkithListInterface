@@ -1,0 +1,29 @@
+package hands_on_collection;
+
+import java.util.*;
+public class WorkithListInterface {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<String> list = new ArrayList<String>();
+		list.add("Abhishek");
+		list.add("Khandelwal");
+		list.add("Bagar");
+		
+		Iterator itr = list.iterator();
+		
+		while(itr.hasNext())
+		{
+			System.out.print(itr.next()+"\t");
+		}
+		System.out.println();
+		System.out.println("Traversing of the data by using List Iterator with printing their index values as well ");
+		
+		ListIterator<String> itr1 = list.listIterator();
+		while(itr1.hasNext())
+		{
+			System.out.println("ndex value is \t" +itr1.nextIndex()+"\t values at this index is \t"+ itr1.next());
+		}
+	}
+
+}
