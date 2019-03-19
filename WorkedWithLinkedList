@@ -1,0 +1,52 @@
+package hands_on_collection;
+import java.util.*;
+
+
+class Book {
+	int id, quantity;
+	String name, author, publisher;
+	
+	
+	public Book(int id, int quantity, String name, String author, String publisher)
+	{
+		this.id = id;
+		this.quantity = quantity;
+		this.name = name;
+		this.author = author;
+		this.publisher = publisher;
+	}
+	
+	}
+
+
+
+
+public class WorkWithLinkedList {
+	
+	public void displayBookInformation(LinkedList<Book> b)
+	{
+		Iterator itr = b.iterator();
+		while(itr.hasNext())
+		{
+			Book ob = (Book)itr.next();
+			System.out.println("Book id is \t"+ob.id+"that is present in quantity of \t"+ob.quantity + "name of the book is \t"+ob.name+"It's author is \t"+ob.author+"and it is published by \t"+ob.publisher);;
+		}
+	}
+	
+	public static void main(String[] args) {
+	Book b1 = new Book(101, 25, "Lifeatpie","Abhishek", "Darla");
+	Book b2 = new Book(102, 26, "Lieatpie","Abhi", "Daina");
+	Book b3 = new Book(103, 27, "tpie","Abhis", "Dany");
+	
+	
+		// TODO Auto-generated method stub
+		LinkedList<Book> list = new LinkedList<Book>();
+		list.add(b1);
+		list.add(b2);
+		list.add(b3);
+		
+		WorkWithLinkedList wwll = new WorkWithLinkedList();
+		wwll.displayBookInformation(list);
+	}
+
+}
