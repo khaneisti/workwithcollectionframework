@@ -1,0 +1,30 @@
+package hands_on_collection;
+
+import java.util.*;
+
+public class WorkWithCollection {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("Abhishek");
+		list.add("Umesh");
+		list.add("Tatiyana");
+		list.add("Abhishek");
+		System.out.println("directly printing the list by using the println statement"+list);
+		Iterator itr = list.iterator();
+		System.out.println("Iterating through iterator");
+		while(itr.hasNext())
+		{
+			System.out.println(itr.next());
+		}
+		
+		System.out.println("Iterating through the for each loop");
+		
+		
+		for(String value:list)
+			System.out.println(" Iterating through the for each loop"+value);
+		
+	}
+
+}
